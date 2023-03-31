@@ -1,6 +1,6 @@
 # oc-template-solid
 
-solid-templates with support & utilities for the [OpenComponents](https://github.com/opentable/oc) template system
+[SolidJS](https://www.solidjs.com/) template with support & utilities for the [OpenComponents](https://github.com/opentable/oc) template system
 
 ---
 
