@@ -1,6 +1,6 @@
 {
   "name": "oc-template-solid-compiler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -31,7 +31,7 @@
     "oc-generic-template-compiler": "2.1.0",
     "oc-hash-builder": "1.0.2",
     "oc-statics-compiler": "2.0.10",
-    "oc-template-solid": "0.0.2",
+    "oc-template-solid": "0.0.1",
     "oc-view-wrapper": "1.0.3",
     "resolve": "^1.20.0",
     "solid-js": "^1.7.0",
