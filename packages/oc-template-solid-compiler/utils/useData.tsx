@@ -12,13 +12,13 @@ type PromiseData<T = any> = T & {
   getSetting(setting: 'name' | 'version' | 'baseUrl' | 'staticPath'): string;
 };
 
-export const DataProvider = ({ children, ...props }: any) => {
+export const DataProvider = (props: any) => {
   // @ts-ignore children props
-  return <DataContext.Provider value={props}>{children}</DataContext.Provider>;
+  return <DataContext.Provider value={props.value}>{props.children}</DataContext.Provider>;
 };
 
 export function useData<T = any>(): PromiseData<T> {
-  const { getData, ...rest }: Data<T> = useContext(DataContext);
+  const { getData, ...rest }: Data<T>  = useContext(DataContext);
   function asyncGetData<O = any, I = any>(data: I) {
     return new Promise<O>((resolve, reject) => {
       // @ts-ignore
