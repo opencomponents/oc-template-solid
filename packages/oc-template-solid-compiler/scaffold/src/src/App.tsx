@@ -1,5 +1,5 @@
-import { createSignal, Show } from 'solid-js';
-import { useData } from 'oc-template-solid-compiler/utils/useData';
+import { createSignal, Show, For } from 'solid-js';
+import { useData } from 'oc-template-typescript-react-compiler/utils/useData';
 import styles from './styles.css';
 import type { AdditionalData, ClientProps } from './types';
 
@@ -15,15 +15,11 @@ const App = () => {
     createSignal<AdditionalData | null>(null);
   const [error, setError] = createSignal('');
 
-  const fetchMoreData = async () => {
-    setError('');
-    try {
-      const data = await getData({ userId, getMoreData: true });
-      setAdditionalData(data);
-    } catch (err) {
-      setError(String(err));
-    }
-  };
+  function handleClick() {
+    getData({ userId, getMoreData: true })
+      .then((response) => setAdditionalData(response))
+      .catch((err) => setError(err));
+  }
 
   return (
     <Show when={!error()} fallback={<div>Something wrong happened!</div>}>
@@ -36,18 +32,21 @@ const App = () => {
         />
         <h1 style={{ margin: '0 0 20px 0' }}>
           Hello,{' '}
-          <span style={{ textDecoration: 'underline' }}>{firstName}</span>{' '}
+          <span style={{ 'text-decoration': 'underline' }}>{firstName}</span>{' '}
           {lastName}
         </h1>
-        {additionalData && (
+        <Show when={!!additionalData()}>
           <div class={styles.info}>
-            <div class={styles.block}>Age: {additionalData.age}</div>
+            <div class={styles.block}>Age: {additionalData()!.age}</div>
             <div class={styles.block}>
-              Hobbies: {additionalData.hobbies.map((x) => x.toLowerCase()).join(', ')}
+              Hobbies:{' '}
+              <For each={additionalData()!.hobbies}>
+                {(hobby) => <div>{hobby}</div>}
+              </For>
             </div>
           </div>
-        )}
-        <button class={styles.button} onClick={fetchMoreData}>
+        </Show>
+        <button class={styles.button} onClick={handleClick}>
           Get extra information
         </button>
       </div>
