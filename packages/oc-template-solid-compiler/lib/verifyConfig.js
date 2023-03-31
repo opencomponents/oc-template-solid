@@ -84,8 +84,11 @@ function verifyTypeScriptSetup(componentPath) {
     resolveJsonModule: { value: true, reason: 'to match rollup loader' },
     isolatedModules: { value: true, reason: 'implementation limitation' },
     jsx: {
-      parsedValue: ts.JsxEmit.ReactJSX,
-      suggested: 'react-jsx'
+      parsedValue: ts.JsxEmit.Preserve,
+      suggested: 'preserve'
+    },
+    jsxImportSource: {
+      suggested: 'solid-js'
     },
     paths: { value: undefined, reason: 'aliased imports are not supported' }
   };
