@@ -18,9 +18,7 @@ export const DataProvider = ({ children, ...props }: any) => {
 };
 
 export function useData<T = any>(): PromiseData<T> {
-  const {
-    value: { getData, ...rest }
-  }: { value: Data<T> } = useContext(DataContext);
+  const { getData, ...rest }: Data<T> = useContext(DataContext);
   function asyncGetData<O = any, I = any>(data: I) {
     return new Promise<O>((resolve, reject) => {
       // @ts-ignore
