@@ -1,5 +1,5 @@
 import { createSignal, Show, For } from 'solid-js';
-import { useData } from 'oc-template-typescript-react-compiler/utils/useData';
+import { useData } from 'oc-template-solid-compiler/utils/useData';
 import styles from './styles.css';
 import type { AdditionalData, ClientProps } from './types';
 

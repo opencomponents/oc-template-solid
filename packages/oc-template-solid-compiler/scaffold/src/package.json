@@ -34,7 +34,7 @@
     "@testing-library/user-event": "^14.4.3",
     "jsdom": "^21.1.1",
     "oc-template-solid": "0.0.1",
-    "oc-template-solid-compiler": "0.0.1",
+    "oc-template-solid-compiler": "0.0.3",
     "solid-js": "^1.7.0",
     "typescript": "5.0.2",
     "vitest": "^0.29.7"
