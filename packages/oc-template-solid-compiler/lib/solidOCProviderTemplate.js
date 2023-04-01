@@ -20,6 +20,7 @@ const solidOCProviderTemplate = ({ viewPath }) => `
         if (err) {
           return cb(err);
         }
+        const { _staticPath, _baseUrl, _componentName, _componentVersion, ...rest } = (data.solidComponent.props as any); 
         cb(null, rest, data.solidComponent.props);
       });
     }
