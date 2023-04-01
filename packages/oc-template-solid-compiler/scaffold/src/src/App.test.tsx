@@ -5,6 +5,7 @@ import { DataProvider } from 'oc-template-solid-compiler/utils/useData';
 import App from './App';
 
 const getData = vi.fn();
+const getSetting = vi.fn();
 
 describe('App - Page', () => {
   beforeEach(() => {
@@ -23,6 +24,7 @@ describe('App - Page', () => {
           lastName: 'lastName',
           userId: 0,
           getData,
+          getSetting,
         }}
       >
         <App />
