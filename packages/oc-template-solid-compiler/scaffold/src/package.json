@@ -21,9 +21,9 @@
     },
     "parameters": {
       "userId": {
-        "default": 0,
+        "default": 1,
         "description": "The user id from the user database",
-        "example": 0,
+        "example": 1,
         "mandatory": true,
         "type": "number"
       }
@@ -35,7 +35,7 @@
     "@types/testing-library__jest-dom": "^5.14.5",
     "jsdom": "^21.1.1",
     "oc-template-solid": "0.0.1",
-    "oc-template-solid-compiler": "0.0.8",
+    "oc-template-solid-compiler": "0.0.9",
     "solid-js": "^1.7.0",
     "typescript": "5.0.2",
     "vitest": "^0.29.7"
