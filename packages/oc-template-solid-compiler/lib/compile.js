@@ -4,9 +4,8 @@ const createCompile = require('oc-generic-template-compiler').createCompile;
 const compileStatics = require('oc-statics-compiler');
 const getInfo = require('oc-template-solid').getInfo;
 const solid = require('vite-plugin-solid');
+const { viteView, viteServer } = require('oc-vite-compiler');
 
-const viteView = require('./to-publish/viteView');
-const viteServer = require('./to-publish/viteServer');
 const verifyTypeScriptSetup = require('./verifyConfig');
 const higherOrderServerTemplate = require('./higherOrderServerTemplate');
 const solidOCProviderTemplate = require('./solidOCProviderTemplate');
