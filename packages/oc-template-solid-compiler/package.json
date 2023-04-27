@@ -1,6 +1,6 @@
 {
   "name": "oc-template-solid-compiler",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -29,7 +29,7 @@
     "oc-generic-template-compiler": "2.1.0",
     "oc-statics-compiler": "2.0.10",
     "oc-template-solid": "0.0.1",
-    "oc-vite-compiler": "^1.0.0",
+    "oc-vite-compiler": "^1.1.1",
     "resolve": "^1.20.0",
     "solid-js": "^1.7.0",
     "vite-plugin-solid": "^2.6.1"
