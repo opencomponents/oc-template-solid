@@ -7,7 +7,6 @@ const solid = require('vite-plugin-solid');
 const { viteView, viteServer } = require('oc-vite-compiler');
 
 const verifyTypeScriptSetup = require('./verifyConfig');
-const higherOrderServerTemplate = require('./higherOrderServerTemplate');
 const solidOCProviderTemplate = require('./solidOCProviderTemplate');
 const htmlTemplate = require('./htmlTemplate');
 
@@ -23,8 +22,7 @@ const compiler = createCompile({
       },
       cb
     ),
-  compileServer: (options, cb) =>
-    viteServer({ ...options, serverWrapper: higherOrderServerTemplate }, cb),
+  compileServer: viteServer,
   compileStatics,
   getInfo
 });

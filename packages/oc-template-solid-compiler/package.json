@@ -1,6 +1,6 @@
 {
   "name": "oc-template-solid-compiler",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -25,6 +25,7 @@
   "types": "./lib/oc-app.d.ts",
   "dependencies": {
     "chalk": "^3.0.0",
+    "cssesc": "^3.0.0",
     "immer": "^9.0.6",
     "oc-generic-template-compiler": "2.1.0",
     "oc-statics-compiler": "2.0.10",
