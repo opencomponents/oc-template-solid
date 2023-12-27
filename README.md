@@ -1,4 +1,8 @@
-# oc-template-solid
+# This package has been moved
+
+**Use the new oc-template-solid template on [vite-templates](https://github.com/opencomponents/vite-templates)**
+
+## oc-template-solid
 
 [SolidJS](https://www.solidjs.com/) template with support & utilities for the [OpenComponents](https://github.com/opentable/oc) template system
 
